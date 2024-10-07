@@ -1,6 +1,7 @@
 **Approach:**
 
 Image Registration -
+
 I implemented a SIFT based feature detector to detect the keypoint and their 128
 dimensional decriptors. It involved approximating the Laplacian of Gaussian (LoG) by
 using the Difference of Gaussians (DoG) to address the problem of scale invariance
@@ -20,6 +21,7 @@ leading to any significant change in the results.
 
 
 Panorama Creation -
+
 For stitching together two images, I matched the SIFT keypoints of both the images
 using a brute force based approach which finds the best matching keypoint in image 2
 for each keypoint in image 1. I also tried the k nearest neighbours algorithm for
@@ -51,6 +53,7 @@ with the superimposition one.
 
 
 Videos:
+
 For generating the panoramas for videos, I simply extracted 6 equally distributed frames
 from the video, added the last frame to ensure that the complete scene is captured and
 fed those images to the image stitcher to generate a panorama
